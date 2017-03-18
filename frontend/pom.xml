@@ -18,6 +18,7 @@
 
     <build>
         <plugins>
+            <!-- Build the Angular 2 application with Maven. -->
             <plugin>
                 <groupId>com.github.eirslett</groupId>
                 <artifactId>frontend-maven-plugin</artifactId>
@@ -52,5 +53,15 @@
                 </executions>
             </plugin>
         </plugins>
+        <resources>
+            <!--
+                Add the packaged Angular2 application to the resources. The given targetPath will put it in /static
+                on the classpath and Spring Boot will serve it from there.
+            -->
+            <resource>
+                <directory>target/frontend</directory>
+                <targetPath>static</targetPath>
+            </resource>
+        </resources>
     </build>
 </project>
