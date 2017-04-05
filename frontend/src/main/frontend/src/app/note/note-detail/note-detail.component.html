@@ -1,0 +1,8 @@
+<div *ngIf="note">
+    <h3>{{note.title}}</h3>
+    <div class="note-body">{{note.body}}</div>
+    <h4>Tags</h4>
+    <ul *ngIf="note.tags && note.tags.length > 0">
+        <li *ngFor="let tag of note.tags">{{tag}}</li>
+    </ul>
+</div>

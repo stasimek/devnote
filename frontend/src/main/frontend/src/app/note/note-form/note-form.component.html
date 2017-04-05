@@ -1,0 +1,13 @@
+<form>
+    <div>
+        <label for="title">Title:</label>
+        <input type="text" name="title" [(ngModel)]="note.title">
+    </div>
+    <div>
+        <textarea name="body" [(ngModel)]="note.body"></textarea>
+    </div>
+    <div>
+        <label for="tags">Tags:</label>
+        <input type="text" name="tagsString" [(ngModel)]="tagsString" (ngModelChange)="tagsChanged()"/>
+    </div>
+</form>

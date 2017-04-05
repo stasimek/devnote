@@ -1,0 +1,11 @@
+{
+    "elements": {},
+    "attributes": {
+        "*ngif": {
+            "context": "ul"
+        },
+        "*ngfor": {
+            "context": "li"
+        }
+    }
+}
